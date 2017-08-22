@@ -1,12 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+    <title>PartyCravings Inc.</title>
+    <meta name="description" content="PartyCravings create your party">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
 </head>
-<body>
+<body style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff;">
 <div class="ui content">
-	<div class="row"></div>
-	<div class="ui grid"></div>
-</div>
+	<div class="ui row" id="top-bar" style="text-align: center; padding-top: 20px;">
+                <span style="font-size: 2em;"><b>PartyCravings Inc.</b></span>
+            </div>
+	<nav id="navigation" class="ui sticky row borderless menu">
+                <div class="ui grid" style="background-color: #edf3ff;">
+                    <div class="three wide column" style="text-align: right;">
+                        <div class="ui center aligned" style="font-family: 'Quicksand', sans-serif;">
+                            <div class="ui dropdown">
+                                <div class="text">Need help?</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <div class="item">info@partycravings.com</div>
+                                    <div class="item">+2340123456</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui eight wide column">
+                        <div class="ui container action input" style="font-family: 'Quicksand', sans-serif;">
+
+                            <input type="text" placeholder="What are you looking for?" style="font-family: 'Quicksand', sans-serif;">
+                            <select class="ui selection dropdown">
+                                <option selected="" value="all">All Categories</option>
+                                <option value="articles">Foods</option>
+                                <option value="products">M.Cs</option>
+                            </select>
+                            <div class="ui primary button"><i class="search icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui three wide column">
+                        <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;">
+                            <i class="right arrow icon"></i>PARTY NOW
+                        </button>
+                    </div>
+                    <div class="ui two wide column" style="font-family: 'Quicksand', sans-serif;">
+                        <img class="ui avatar image" src="demo-4.jpg">
+                        <span>Login</span>
+                    </div>
+                </div>
+            </nav>
+	<div class="row">
+		<div class="ui grid">
+			<div class="ui four wide column">HEHHE</div>
+			<div class="ui twelve wide column">HAHAHA</div>
+		</div>
+	</div>
 </body>
+<script type="text/javascript">
+	$('.ui.dropdown')
+        .dropdown({
+            on: 'hover'
+        });
+    $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 250) {
+                $('#navigation').addClass('fixed top');
+            } else {
+                $('#navigation').removeClass('fixed top');
+            }
+        });
+    });
+</script>
 </html>
