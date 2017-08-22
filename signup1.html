@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PartyCravings Inc. | Sign Up</title>
+    <meta name="description" content="PartyCravings create your party">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+</head>
+
+<body style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff;">
+    <div class="ui center aligned grid">
+        <div class="ui one wide column"></div>
+        <div class="ui six wide column">
+            <div class="row">
+                <div class="row" style="text-align:left; padding-top:50px; font-size:2em;"><b><span>PartyCravings Inc.</b>
+                    </span>
+                </div>
+            </div>
+            <div class="row" style="padding-top:170px;">
+                <span style="text-align: left; font-size: 3em;"> Create an account</span>
+                <br>
+                <br>
+                <br>
+                <form id="#email-form" class="ui form">
+                    <div class="one field">
+                        <div class="field">
+                            <label style="text-align: left; font-size: 1.3em;"><span>What is your <b>e-mail address</b></span>
+                            </label>
+                            <br>
+                            <input name="email" type="text" placeholder="Ex. john@example.com">
+                        </div>
+                        <span style="text-align: left;">(Don't worry about setting a password right now, we'll e-mail you a link to create one)</span>
+                        <br>
+                        <br>
+                        <div id="email-form" class="ui inverted circular submit button" style="color:#FF8300;"><span>Next</span><i class="right arrow icon"></i>
+                        </div>&nbsp;
+                        <div class="ui compact error message"></div>
+                </form>
+                <br>
+                <br>
+                    <div>
+                        <button type="button" class="ui circular facebook button"><i class="facebook icon"></i>Facebook</button>
+                        <button type="button" class="ui circular google plus button"><i class="google plus icon"></i>Google Plus</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui one wide column"></div>
+        <div id="page-side" class="ui eight wide column" style="background-color: #FF8300; height: 102.5vh;">
+            <div class="row" style="text-align: right; padding-top: 25px; padding-right: 25px;"><span style="color: white;">Have an existing account?</span>&nbsp;
+                <button class="ui inverted basic button">Sign In</button>
+            </div>
+            <div class="row" style="padding-top:225px;"><i class="inverted mail icon" style="font-size: 19.5em;"></i>
+                <br>
+                <span style="color: white;">By proceeding to create your account and use PartyCravings, you are agreeing to our <a style="color: white;" href="#"><u>Terms of Service</u></a> and <a style="color: white;" href="#"><u>Privacy Policy</u></a>. If you do not agree, you cannot use PartyCravings.</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('.ui.form')
+        .form({
+            fields: {
+                email: {
+                    identifier: 'email',
+                    rules: [{
+                        type: 'email',
+                        prompt: 'Please enter a valid e-mail'
+                    }]
+                }
+            }
+        });
+    $('#email-form').click(function() {
+        $.ajax({
+            url: 'https://partycravings.com/signup/1',
+            type: 'post',
+            dataType: 'json',
+            data: $('form#myForm').serialize(),
+            success: function(data) {
+                //... do something with the data...
+            }
+        });
+    });
+</script>
+
+</html>

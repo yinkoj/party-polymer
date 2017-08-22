@@ -1,0 +1,32 @@
+{
+  "name": "partycravings-semantic",
+  "version": "1.0.0",
+  "description": "This contains PartyCravings Frontend (semantic-ui version)",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.1",
+    "semantic-ui": "^2.2.13",
+    "semantic-ui-css": "^2.2.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PartyCravings/web-app.git"
+  },
+  "keywords": [
+    "semantic-ui",
+    "semantic",
+    "clean-ui",
+    "partycravings"
+  ],
+  "author": "Odusanya Victor Olukayode <odusanya18@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PartyCravings/web-app/issues"
+  },
+  "homepage": "https://github.com/PartyCravings/web-app#readme"
+}
