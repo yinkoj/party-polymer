@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <title>PartyCravings Inc.</title>
+    <meta name="description" content="PartyCravings create your party">
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    <script src="jquery.lazyload.js"></script>
+    <script src="js/jssor.slider-25.3.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="jquery-sticklr-1.4.js"></script>
+</head>
+<body style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff;">
+
+<div class="ui content">
+	<div class="ui center aligned grid" style="padding-top: 20px">
+            <!--All the top nav bar divs-->
+            <div class="row" id="top-bar">
+                <span style="font-size: 2em;"><b>PartyCravings Inc.</b></span>
+            </div>
+            <div class="row">
+                <!--All the stacked top categories with unknown number-->
+                <div class="ui equal width grid" style="font-size: 1.2em;">
+                    <a href="#" class="item">DRINKS</a>
+                    <a href="#" class="item">FOOD</a>
+                    <a href="#" class="item">M.Cs</a>
+                    <a href="#" class="item">COMEDIANS</a>
+                </div>
+            </div>
+            <nav id="navigation" class="ui sticky row borderless menu" style="font-family: 'Quicksand', sans-serif;">
+                <div class="ui grid" style="background-color: #edf3ff;">
+                    <div class="three wide column" style="text-align: right;">
+                        <div class="ui center aligned">
+                            <div class="ui dropdown">
+                                <div class="text">Need help?</div>
+                                <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <div class="item">info@partycravings.com</div>
+                                    <div class="item">+2340123456</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui eight wide column">
+                        <div class="ui container action input">
+
+                            <input type="text" style="font-family: 'Quicksand', sans-serif;" placeholder="What are you looking for?">
+                            <select class="ui selection dropdown">
+                                <option selected="" value="all">All Categories</option>
+                                <option value="articles">Foods</option>
+                                <option value="products">M.Cs</option>
+                            </select>
+                            <div class="ui primary button"><i class="search icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui three wide column">
+                        <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;">
+                            <i class="right arrow icon"></i>PARTY NOW
+                        </button>
+                    </div>
+                    <div class="ui two wide column">
+                        <img class="ui avatar image" src="demo-4.jpg">
+                        <span>Login</span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+        	<div class="ui grid">
+        		<div class="ui column">HH</div>
+        		<div class="ui column">NN</div>
+        	</div>
+        </div>
+</div>
+
+</body>
+<script type="text/javascript">
+	$('.ui.dropdown')
+        .dropdown({
+            on: 'hover'
+        });
+</script>
+</html>
