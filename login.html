@@ -1,79 +1,104 @@
 <!DOCTYPE html>
-<html>
 
+<html>
 <head>
     <title>PartyCravings Inc. | Login</title>
-    <meta name="description" content="PartyCravings create your party">
-    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <meta content="PartyCravings create your party" name="description">
+    <link href="semantic/dist/semantic.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    <script src="node_modules/jquery/dist/jquery.js" type="text/javascript">
+    </script>
+    <script src="semantic/dist/semantic.min.js" type="text/javascript">
+    </script>
 </head>
 
 <body style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff;">
     <div class="ui content">
-        <div class="row" style="padding-left:100px; padding-top:50px; font-size:2em;"><b><span>PartyCravings Inc.</b>
-            </span>
+        <div class="row" style="padding-left:100px; padding-top:50px; font-size:2em;">
+            <span><b>PartyCravings Inc.</b></span>
         </div>
-        <div class="row" style="text-align: center; padding-top: 90px; font-size: 4em;"><span>Log In</span>
+
+
+        <div class="row" style="text-align: center; padding-top: 90px; font-size: 4em;">
+            <span>Log In</span>
         </div>
         <br>
         <br>
-        <div class="row" style="text-align: center; font-size:1.3em;"><span>New to PartyCravings? <a href="signup1.html">Sign Up</a></span>
+
+
+        <div class="row" style="text-align: center; font-size:1.3em;">
+            <span>New to PartyCravings? <a href="signup1.html">Sign Up</a></span>
         </div>
         <br>
         <br>
+
+
         <div class="row">
             <div class="ui container grid">
-                <div class="ui two wide column"></div>
+                <div class="ui two wide column">
+                </div>
+
+
                 <div class="ui five wide column">
                     <form class="ui form" method="post">
                         <div class="field">
-                            <label style="text-align: left; font-size: 1.3em;">Email</label>
-                            <input type="text" name="email" placeholder="">
+                            <label style="text-align: left; font-size: 1.3em;">Email</label> <input name="email" placeholder="" type="text">
                         </div>
+
+
                         <div class="field">
-                            <label style="text-align: left; font-size: 1.3em;">Password</label>
-                            <input type="password" name="password" placeholder="">
+                            <label style="text-align: left; font-size: 1.3em;">Password</label> <input name="password" placeholder="" type="password">
                         </div>
+
+
                         <div class="field">
                             <div class="ui toggle checkbox">
-                                <input type="checkbox" name="remember-me" tabindex="0" class="hidden">
-                                <label>Remember Me</label>
+                                <input class="hidden" name="remember-me" tabindex="0" type="checkbox"> <label>Remember Me</label>
                             </div>
                         </div>
-                        <a href="#">Forgot password?</a>&nbsp;&nbsp;
-                        <button class="ui circular primary button" type="submit" style="font-size:1.5em; text-align:left; font-family: 'Quicksand', sans-serif;">Log In</button>
+                        <a href="#">Forgot password?</a>&nbsp;&nbsp; <button class="ui circular primary button" style="font-size:1.5em; text-align:left; font-family: 'Quicksand', sans-serif;" type="submit">Log In</button>
                     </form>
                 </div>
+
+
                 <div class="ui two wide column">
-                    <div class="ui vertical divider" />OR</div>
-            </div>
-            <div class="ui left aligned five wide column" style="font-size:5em;">
-                <br>
-                <div class="ui labeled button" tabindex="0" style="font-family: 'Quicksand', sans-serif;">
-                    <div class="big ui blue button">
-                        <i class="facebook icon" style="font-size: 1.3em;"></i>
+                    <div class="ui vertical divider">
+                        OR
                     </div>
-                    <a class="ui basic blue label">Continue with Facebook</a>
                 </div>
-                <br>
-                <br>
-                <div class="ui labeled button" tabindex="0" style="font-family: 'Quicksand', sans-serif;">
-                    <div class="big ui red button">
-                        <i class="google icon" style="font-size: 1.3em;"></i>
+
+
+                <div class="ui left aligned five wide column" style="font-size:5em;">
+                    <br>
+
+
+                    <div class="ui labeled button" style="font-family: 'Quicksand', sans-serif;" tabindex="0">
+                        <div class="big ui blue button">
+                            <i class="facebook icon" style="font-size: 1.3em;"></i>
+                        </div>
+                        <a class="ui basic blue label">Continue with Facebook</a>
                     </div>
-                    <a class="ui basic red label">Continue with Google +&nbsp;</a>
+                    <br>
+                    <br>
+
+
+                    <div class="ui labeled button" style="font-family: 'Quicksand', sans-serif;" tabindex="0">
+                        <div class="big ui red button">
+                            <i class="google icon" style="font-size: 1.3em;"></i>
+                        </div>
+                        <a class="ui basic red label">Continue with Google +&nbsp;</a>
+                    </div>
+                </div>
+
+
+                <div class="ui two wide column">
                 </div>
             </div>
-            <div class="ui two wide column"></div>
         </div>
     </div>
-    </div>
+    <script>
+       $('.ui.checkbox')
+           .checkbox();
+    </script>
 </body>
-<script>
-    $('.ui.checkbox')
-        .checkbox();
-</script>
-
 </html>

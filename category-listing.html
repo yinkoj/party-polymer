@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>PartyCravings Inc.</title>
-    <meta name="description" content="PartyCravings create your party">
-    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" src="semantic/dist/semantic.min.js"></script>
-    <script type="text/javascript" src="jquery.sticky.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    <meta content="PartyCravings create your party" name="description">
+    <script src="node_modules/jquery/dist/jquery.js">
+    </script>
+    <script src="semantic/dist/semantic.min.js" type="text/javascript">
+    </script>
+    <script async defer src="jquery.sticky.lockfixed.min.js">
+    </script>
+    <link href="semantic/dist/semantic.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gmap3/7.2.0/gmap3.min.js">
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwp8jow1XJeQp3LHDQyeQMRNxhGrgEiN8&region=GB" type="text/javascript">
+    </script>
+    <script src="jquery.sticky.js">
+    </script>
+    <style type="text/css">
+              .map {
+          display: block;
+          width: 100%;
+          height: 85vh;
+       }
+    </style>
 </head>
-
 <body style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff;">
     <div class="ui content">
         <div class="ui center aligned grid" style="padding-top: 20px">
@@ -22,421 +36,389 @@
             <div class="row">
                 <!--All the stacked top categories with unknown number-->
                 <div class="ui equal width grid" style="font-size: 1.2em;">
-                    <a href="#" class="item">DRINKS</a>
-                    <a href="#" class="item">FOOD</a>
-                    <a href="#" class="item">M.Cs</a>
-                    <a href="#" class="item">COMEDIANS</a>
+                    <a class="item" href="#">DRINKS</a> <a class="item" href="#">FOOD</a> <a class="item" href="#">M.Cs</a> <a class="item" href="#">COMEDIANS</a>
                 </div>
             </div>
-            <nav id="navigation" class="ui sticky row borderless menu" style="font-family: 'Quicksand', sans-serif;">
+            <nav class="ui sticky row borderless menu" id="navigation" style="font-family: 'Quicksand', sans-serif;">
                 <div class="ui grid" style="background-color: #edf3ff;">
                     <div class="three wide column" style="text-align: right;">
                         <div class="ui center aligned">
                             <div class="ui dropdown">
-                                <div class="text">Need help?</div>
-                                <i class="dropdown icon"></i>
+                                <div class="text">
+                                    Need help?
+                                </div><i class="dropdown icon"></i>
                                 <div class="menu">
-                                    <div class="item">info@partycravings.com</div>
-                                    <div class="item">+2340123456</div>
+                                    <div class="item">
+                                        info@partycravings.com
+                                    </div>
+                                    <div class="item">
+                                        +2340123456
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="ui eight wide column">
                         <div class="ui container action input">
-
-                            <input type="text" style="font-family: 'Quicksand', sans-serif;" placeholder="What are you looking for?">
-                            <select class="ui selection dropdown">
-                                <option selected="" value="all">All Categories</option>
-                                <option value="articles">Foods</option>
-                                <option value="products">M.Cs</option>
+                            <input placeholder="What are you looking for?" style="font-family: 'Quicksand', sans-serif;" type="text"> <select class="ui selection dropdown">
+                                <option value="">
+                                    All Categories
+                                </option>
+                                <option value="articles">
+                                    Foods
+                                </option>
+                                <option value="products">
+                                    M.Cs
+                                </option>
                             </select>
-                            <div class="ui primary button"><i class="search icon"></i>
+                            <div class="ui primary button">
+                                <i class="search icon"></i>
                             </div>
                         </div>
                     </div>
                     <div class="ui three wide column">
-                        <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;">
-                            <i class="right arrow icon"></i>PARTY NOW
-                        </button>
+                        <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;"><i class="right arrow icon"></i>PARTY NOW</button>
                     </div>
                     <div class="ui two wide column">
-                        <img class="ui avatar image" src="demo-4.jpg">
-                        <span>Login</span>
+                        <img alt="#" class="ui avatar image" src="demo-4.jpg"> <span>Login</span>
                     </div>
                 </div>
             </nav>
         </div>
         <div class="row" style="padding-top: 28px;">
             <div class="ui grid">
-                <div id="sticky-sidebar" class="ui four wide column" style="position: -webkit-sticky; position: sticky; top: 0;">
-                    <div class="ui container vertical menu" style="font-family: 'Quicksand', sans-serif;">
+                <div class="ui four wide column" id="sticky-sidebar">
+                    <div class="ui container vertical menu" style="font-family: 'Quicksand', sans-serif; height: 85vh;">
                         <div class="item">
-                            <div class="header">Drinks</div>
+                            <div class="header">
+                                Drinks
+                            </div>
                             <div class="menu">
-                                <a class="item">Soft Drinks</a>
-                                <a class="item">Alcoholics</a>
+                                <a class="item">Soft Drinks</a> <a class="item">Alcoholics</a>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="header">Event Centres</div>
+                            <div class="header">
+                                Event Centres
+                            </div>
                             <div class="menu">
-                                <a class="item">For Birthdays</a>
-                                <a class="item">For Burials</a>
-                                <a class="item">Nuptials</a>
+                                <a class="item">For Birthdays</a> <a class="item">For Burials</a> <a class="item">Nuptials</a>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="header">Halo</div>
+                            <div class="header">
+                                Halo
+                            </div>
                             <div class="menu">
-                                <a class="item">FFFF</a>
-                                <a class="item">JJJJ</a>
+                                <a class="item">FFFF</a> <a class="item">JJJJ</a>
                             </div>
                         </div>
                         <div class="item">
-                            <div class="header">Vvvvv</div>
+                            <div class="header">
+                                Vvvvv
+                            </div>
                             <div class="menu">
-                                <a class="item">VVVV</a>
-                                <a class="item">ZZZZZ</a>
+                                <a class="item">VVVV</a> <a class="item">ZZZZZ</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="ui twelve wide column">
                     <div class="row">
-                        <div class="ui fluid"><img src="demo-4.jpg" width="100%" height="150px"></div>
+                        <div class="ui fluid"><img alt="#" height="150" src="demo-4.jpg" width="100%"></div>
                     </div>
                     <div class="row">
-                        <div class="ui fluid action input" style="width: 100%;">
+                        <div class="ui action input" style="width: 50px;">
                             <select class="ui selection dropdown">
-                                <option selected="" value="all">Location</option>
-                                <option value="articles">Nearby</option>
-                                <option value="products">50km</option>
+                                <option selected="selected" value="all">
+                                    Location
+                                </option>
+                                <option value="articles">
+                                    Nearby
+                                </option>
+                                <option value="products">
+                                    50km
+                                </option>
+                            </select> <select class="ui selection dropdown">
+                                <option selected="selected" value="all">
+                                    Price
+                                </option>
+                                <option value="articles">
+                                    #1000-#10000
+                                </option>
+                                <option value="products">
+                                    #10000-#50000
+                                </option>
+                            </select> <select class="ui selection dropdown">
+                                <option selected="selected" value="all">
+                                    Popularity
+                                </option>
+                                <option value="articles">
+                                    Very Popular
+                                </option>
+                                <option value="products">
+                                    All known
+                                </option>
+                            </select> <select class="ui selection dropdown">
+                                <option selected="selected" value="all">
+                                    Stars
+                                </option>
+                                <option value="articles">
+                                    Five stars
+                                </option>
+                                <option value="products">
+                                    Four stars
+                                </option>
                             </select>
-                            <select class="ui selection dropdown">
-                                <option selected="" value="all">Price</option>
-                                <option value="articles">#1000-#10000</option>
-                                <option value="products">#10000-#50000</option>
-                            </select>
-
-                            <select class="ui selection dropdown">
-                                <option selected="" value="all">Popularity</option>
-                                <option value="articles">Very Popular</option>
-                                <option value="products">All known</option>
-                            </select>
-
-                            <select class="ui selection dropdown">
-                                <option selected="" value="all">Stars</option>
-                                <option value="articles">Five stars</option>
-                                <option value="products">Four stars</option>
-                            </select>
-                            <div class="ui primary button" style="font-family: 'Quicksand', sans-serif;">Filter<i class="right arrow icon"></i>
+                            <div class="ui primary button" style="font-family: 'Quicksand', sans-serif;">
+                                Filter<i class="right arrow icon"></i>
                             </div>
                         </div>
                     </div>
                     <div class="row" style="padding-top: 5px;">
                         <div class="ui grid">
-                            <div class="ui fourteen wide column">
+                            <div class="ui twelve wide column">
                                 <div class="row" style="padding-top: 10px;">
-								<div class="ui horizontal segment">
-
-                                    <div class="ui grid">
-
-                                        <div class="ui six wide column">
-                                        <div class="row"><div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="demo-4.jpg"></div>
-                            <noscript><img src="demo-4.jpg" width="100%" height="100%">
-                            </noscript></div>
-                                        <div class="row">
-                                        	<div class="ui equal width grid">
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        	</div>
+                                    <div class="ui horizontal segment">
+                                        <div class="ui grid">
+                                            <div class="ui six wide column">
+                                                <div class="row">
+                                                    <div class="ui embed" data-placeholder="demo-4.jpg" data-url="https://www.youtube.com/embed/O6Xo21L0ybE"></div><noscript><img alt="#" height="100%" src="demo-4.jpg" width="100%"></noscript>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="ui equal width grid">
+                                                        <div class="ui fluid column"><img alt="#" data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img alt="#" data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img alt="#" data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ui six wide column">
+                                                <span style="font-size:1.3em;"><b>Demo-1</b></span>
+                                                <div id="stars" style="padding-top: 10px;">
+                                                    <i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i>
+                                                </div><span style="text-align:left;">This is a boring description...</span><br>
+                                                <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;"><i class="right plus icon"></i>Add</button>
+                                            </div>
                                         </div>
-                                        </div>
-
-                                        <div class="ui eight wide column"><span style="font-size:1.3em;"><b>Demo-1</b></span>
-
-                                            <div id="stars" style="padding-top: 10px;"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
-
-                                            <span style="text-align:left;">This is a boring descriptiondj jdjdjdjjdj djdjjdjdjj jjjjjjjjjjj jjjjjjjjjjjjjj jjjjjjjjei ruuuuuuuuuuu uuuuuuuu uuuuuuuuuu uuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuuuuuuu uuuuuuuuuuuu uuuuuuuuuuuuuuu uuuuuuuuuuuuuuuu uuuuuuuuu</span>
-                                            <br>
-                                            <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;">
-                                                <i class="right plus icon"></i>Add
-                                            </button>
-
-                                        </div>
-
                                     </div>
-									
                                 </div>
-								</div>
-								
-								<div class="row" style="padding-top: 10px;">
-								<div class="ui horizontal segment">
-
-                                    <div class="ui grid">
-
-                                        <div class="ui six wide column">
-                                        <div class="row"><div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="demo-4.jpg"></div>
-                            <noscript><img src="demo-4.jpg" width="100%" height="100%">
-                            </noscript></div>
-                                        <div class="row">
-                                        	<div class="ui equal width grid">
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        	</div>
+                                <div class="row" style="padding-top: 10px;">
+                                    <div class="ui horizontal segment">
+                                        <div class="ui grid">
+                                            <div class="ui six wide column">
+                                                <div class="row">
+                                                    <div class="ui embed" data-placeholder="demo-4.jpg" data-url="https://www.youtube.com/embed/O6Xo21L0ybE"></div><noscript><img height="100%" src="demo-4.jpg" width="100%"></noscript>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="ui equal width grid">
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ui six wide column">
+                                                <span style="font-size:1.3em;"><b>Demo-1</b></span>
+                                                <div id="stars" style="padding-top: 10px;">
+                                                    <i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i>
+                                                </div><span style="text-align:left;">This is a boring description...</span><br>
+                                                <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;"><i class="right plus icon"></i>Add</button>
+                                            </div>
                                         </div>
-                                        </div>
-
-                                        <div class="ui eight wide column"><span style="font-size:1.3em;"><b>Demo-1</b></span>
-
-                                            <div id="stars" style="padding-top: 10px;"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
-
-                                            <span style="text-align:left;">This is a boring descriptiondj jdjdjdjjdj djdjjdjdjj jjjjjjjjjjj jjjjjjjjjjjjjj jjjjjjjjei ruuuuuuuuuuu uuuuuuuu uuuuuuuuuu uuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuuuuuuu uuuuuuuuuuuu uuuuuuuuuuuuuuu uuuuuuuuuuuuuuuu uuuuuuuuu</span>
-                                            <br>
-                                            <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;">
-                                                <i class="right plus icon"></i>Add
-                                            </button>
-
-                                        </div>
-
                                     </div>
-									
                                 </div>
-								</div>
-								
-								<div class="row" style="padding-top: 10px;">
-								<div class="ui horizontal segment">
-
-                                    <div class="ui grid">
-
-                                        <div class="ui six wide column">
-                                        <div class="row"><div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="demo-4.jpg"></div>
-                            <noscript><img src="demo-4.jpg" width="100%" height="100%">
-                            </noscript></div>
-                                        <div class="row">
-                                        	<div class="ui equal width grid">
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        	</div>
+                                <div class="row" style="padding-top: 10px;">
+                                    <div class="ui horizontal segment">
+                                        <div class="ui grid">
+                                            <div class="ui six wide column">
+                                                <div class="row">
+                                                    <div class="ui embed" data-placeholder="demo-4.jpg" data-url="https://www.youtube.com/embed/O6Xo21L0ybE"></div><noscript><img height="100%" src="demo-4.jpg" width="100%"></noscript>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="ui equal width grid">
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ui six wide column">
+                                                <span style="font-size:1.3em;"><b>Demo-1</b></span>
+                                                <div id="stars" style="padding-top: 10px;">
+                                                    <i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i>
+                                                </div><span style="text-align:left;">This is a boring description...</span><br>
+                                                <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;"><i class="right plus icon"></i>Add</button>
+                                            </div>
                                         </div>
-                                        </div>
-
-                                        <div class="ui eight wide column"><span style="font-size:1.3em;"><b>Demo-1</b></span>
-
-                                            <div id="stars" style="padding-top: 10px;"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
-
-                                            <span style="text-align:left;">This is a boring descriptiondj jdjdjdjjdj djdjjdjdjj jjjjjjjjjjj jjjjjjjjjjjjjj jjjjjjjjei ruuuuuuuuuuu uuuuuuuu uuuuuuuuuu uuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuuuuuuu uuuuuuuuuuuu uuuuuuuuuuuuuuu uuuuuuuuuuuuuuuu uuuuuuuuu</span>
-                                            <br>
-                                            <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;">
-                                                <i class="right plus icon"></i>Add
-                                            </button>
-
-                                        </div>
-
                                     </div>
-									
                                 </div>
-								</div>
-								
-								<div class="row" style="padding-top: 10px;">
-								<div class="ui horizontal segment">
-
-                                    <div class="ui grid">
-
-                                        <div class="ui six wide column">
-                                        <div class="row"><div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="demo-4.jpg"></div>
-                            <noscript><img src="demo-4.jpg" width="100%" height="100%">
-                            </noscript></div>
-                                        <div class="row">
-                                        	<div class="ui equal width grid">
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        	</div>
+                                <div class="row" style="padding-top: 10px;">
+                                    <div class="ui horizontal segment">
+                                        <div class="ui grid">
+                                            <div class="ui six wide column">
+                                                <div class="row">
+                                                    <div class="ui embed" data-placeholder="demo-4.jpg" data-url="https://www.youtube.com/embed/O6Xo21L0ybE"></div><noscript><img height="100%" src="demo-4.jpg" width="100%"></noscript>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="ui equal width grid">
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ui six wide column">
+                                                <span style="font-size:1.3em;"><b>Demo-1</b></span>
+                                                <div id="stars" style="padding-top: 10px;">
+                                                    <i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i>
+                                                </div><span style="text-align:left;">This is a boring description...</span><br>
+                                                <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;"><i class="right plus icon"></i>Add</button>
+                                            </div>
                                         </div>
-                                        </div>
-
-                                        <div class="ui eight wide column"><span style="font-size:1.3em;"><b>Demo-1</b></span>
-
-                                            <div id="stars" style="padding-top: 10px;"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
-
-                                            <span style="text-align:left;">This is a boring descriptiondj jdjdjdjjdj djdjjdjdjj jjjjjjjjjjj jjjjjjjjjjjjjj jjjjjjjjei ruuuuuuuuuuu uuuuuuuu uuuuuuuuuu uuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuuuuuuu uuuuuuuuuuuu uuuuuuuuuuuuuuu uuuuuuuuuuuuuuuu uuuuuuuuu</span>
-                                            <br>
-                                            <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;">
-                                                <i class="right plus icon"></i>Add
-                                            </button>
-
-                                        </div>
-
                                     </div>
-									
                                 </div>
-								</div>
-								
-								<div class="row" style="padding-top: 10px;">
-								<div class="ui horizontal segment">
-
-                                    <div class="ui grid">
-
-                                        <div class="ui six wide column">
-                                        <div class="row"><div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="demo-4.jpg"></div>
-                            <noscript><img src="demo-4.jpg" width="100%" height="100%">
-                            </noscript></div>
-                                        <div class="row">
-                                        	<div class="ui equal width grid">
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        	</div>
+                                <div class="row" style="padding-top: 10px;">
+                                    <div class="ui horizontal segment">
+                                        <div class="ui grid">
+                                            <div class="ui six wide column">
+                                                <div class="row">
+                                                    <div class="ui embed" data-placeholder="demo-4.jpg" data-url="https://www.youtube.com/embed/O6Xo21L0ybE"></div><noscript><img height="100%" src="demo-4.jpg" width="100%"></noscript>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="ui equal width grid">
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ui six wide column">
+                                                <span style="font-size:1.3em;"><b>Demo-1</b></span>
+                                                <div id="stars" style="padding-top: 10px;">
+                                                    <i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i>
+                                                </div><span style="text-align:left;">This is a boring description...</span><br>
+                                                <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;"><i class="right plus icon"></i>Add</button>
+                                            </div>
                                         </div>
-                                        </div>
-
-                                        <div class="ui eight wide column"><span style="font-size:1.3em;"><b>Demo-1</b></span>
-
-                                            <div id="stars" style="padding-top: 10px;"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
-
-                                            <span style="text-align:left;">This is a boring descriptiondj jdjdjdjjdj djdjjdjdjj jjjjjjjjjjj jjjjjjjjjjjjjj jjjjjjjjei ruuuuuuuuuuu uuuuuuuu uuuuuuuuuu uuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuuuuuuu uuuuuuuuuuuu uuuuuuuuuuuuuuu uuuuuuuuuuuuuuuu uuuuuuuuu</span>
-                                            <br>
-                                            <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;">
-                                                <i class="right plus icon"></i>Add
-                                            </button>
-
-                                        </div>
-
                                     </div>
-									
                                 </div>
-								</div>
-								
-								<div class="row" style="padding-top: 10px;">
-								<div class="ui horizontal segment">
-
-                                    <div class="ui grid">
-
-                                        <div class="ui six wide column">
-                                        <div class="row"><div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="demo-4.jpg"></div>
-                            <noscript><img src="demo-4.jpg" width="100%" height="100%">
-                            </noscript></div>
-                                        <div class="row">
-                                        	<div class="ui equal width grid">
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        	</div>
+                                <div class="row" style="padding-top: 10px;">
+                                    <div class="ui horizontal segment">
+                                        <div class="ui grid">
+                                            <div class="ui six wide column">
+                                                <div class="row">
+                                                    <div class="ui embed" data-placeholder="demo-4.jpg" data-url="https://www.youtube.com/embed/O6Xo21L0ybE"></div><noscript><img height="100%" src="demo-4.jpg" width="100%"></noscript>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="ui equal width grid">
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ui six wide column">
+                                                <span style="font-size:1.3em;"><b>Demo-1</b></span>
+                                                <div id="stars" style="padding-top: 10px;">
+                                                    <i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i>
+                                                </div><span style="text-align:left;">This is a boring description...</span><br>
+                                                <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;"><i class="right plus icon"></i>Add</button>
+                                            </div>
                                         </div>
-                                        </div>
-
-                                        <div class="ui eight wide column"><span style="font-size:1.3em;"><b>Demo-1</b></span>
-
-                                            <div id="stars" style="padding-top: 10px;"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
-
-                                            <span style="text-align:left;">This is a boring descriptiondj jdjdjdjjdj djdjjdjdjj jjjjjjjjjjj jjjjjjjjjjjjjj jjjjjjjjei ruuuuuuuuuuu uuuuuuuu uuuuuuuuuu uuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuuuuuuu uuuuuuuuuuuu uuuuuuuuuuuuuuu uuuuuuuuuuuuuuuu uuuuuuuuu</span>
-                                            <br>
-                                            <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;">
-                                                <i class="right plus icon"></i>Add
-                                            </button>
-
-                                        </div>
-
                                     </div>
-									
                                 </div>
-								</div>
-								
-								<div class="row" style="padding-top: 10px;">
-								<div class="ui horizontal segment">
-
-                                    <div class="ui grid">
-
-                                        <div class="ui six wide column">
-                                        <div class="row"><div class="ui embed" data-url="https://www.youtube.com/embed/O6Xo21L0ybE" data-placeholder="demo-4.jpg"></div>
-                            <noscript><img src="demo-4.jpg" width="100%" height="100%">
-                            </noscript></div>
-                                        <div class="row">
-                                        	<div class="ui equal width grid">
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        		<div class="ui fluid column"><img src="demo-5.jpg" width="100%" height="100%"></div>
-                                        	</div>
+                                <div class="row" style="padding-top: 10px;">
+                                    <div class="ui horizontal segment">
+                                        <div class="ui grid">
+                                            <div class="ui six wide column">
+                                                <div class="row">
+                                                    <div class="ui embed" data-placeholder="demo-4.jpg" data-url="https://www.youtube.com/embed/O6Xo21L0ybE"></div><noscript><img height="100%" src="demo-4.jpg" width="100%"></noscript>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="ui equal width grid">
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                        <div class="ui fluid column"><img data-src="demo-2.jpg" height="100%" src="demo-5.jpg" width="100%"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ui six wide column">
+                                                <span style="font-size:1.3em;"><b>Demo-1</b></span>
+                                                <div id="stars" style="padding-top: 10px;">
+                                                    <i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i>
+                                                </div><span style="text-align:left;">This is a boring description...</span><br>
+                                                <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;"><i class="right plus icon"></i>Add</button>
+                                            </div>
                                         </div>
-                                        </div>
-
-                                        <div class="ui eight wide column"><span style="font-size:1.3em;"><b>Demo-1</b></span>
-
-                                            <div id="stars" style="padding-top: 10px;"><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i><i class="star icon"></i></div>
-
-                                            <span style="text-align:left;">This is a boring descriptiondj jdjdjdjjdj djdjjdjdjj jjjjjjjjjjj jjjjjjjjjjjjjj jjjjjjjjei ruuuuuuuuuuu uuuuuuuu uuuuuuuuuu uuuuuuuuuuuuuuuuuu uuuuuuuuuuuuuu uuuuuuuuuuuuuuuuu uuuuuuuuuuuu uuuuuuuuuuuuuuu uuuuuuuuuuuuuuuu uuuuuuuuu</span>
-                                            <br>
-                                            <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;">
-                                                <i class="right plus icon"></i>Add
-                                            </button>
-
-                                        </div>
-
                                     </div>
-									
                                 </div>
-								</div>
-								
-								
-								
-								
-								
                             </div>
-                            <div class="ui two wide column"></div>
+                            <div class="ui four wide column" style="padding-top: 15px; right: 15px;">
+                                <div class="ui vertical segment" id="sticky-map">
+                                    <div class="map"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="context"></div>
     </div>
+    <script type="text/javascript">
+          $('.ui.dropdown')
+              .dropdown({
+                  on: 'hover'
+              });
+          $(".ui.embed").embed();
+    </script> 
+    <script type="text/javascript">
+          $('#sticky-sidebar').stickThis({
+              zindex: 1,
+              top: 68,
+              pushup: '.page-footer',
+          });
+    </script> 
+    <script>
+          $('.map')
+            .gmap3({
+              address: 'Paris, France',
+              zoom: 13,
+              mapTypeId : google.maps.MapTypeId.ROADMAP
+            })
+            .circle({
+              address: 'Perpignan, France',
+              radius : 50000,
+              fillColor : "#FFAF9F",
+              strokeColor : "#FF512F"
+            })
+            .circle({
+              address: 'Poitiers, France',
+              radius : 50000,
+              fillColor : "#FFAF9F",
+              strokeColor : "#FF512F"
+            })
+            .wait(2000) // to let you appreciate the current zoom & center
+            .fit()
+    </script> 
+    <script>
+        $.lockfixed("#sticky-map",{offset: {top: 68,}});
+    </script> 
+    <script>
+        $('#navigation')
+        .sticky({
+          offset:0,
+          context: '#context'
+        });
+
+        $('.ui.content img')
+     .visibility({
+       type       : 'image',
+       transition : 'fade in',
+       duration   : 1000
+     })
+    ;
+    </script>
 </body>
-<script type="text/javascript">
-    $('.ui.dropdown')
-        .dropdown({
-            on: 'hover'
-        });
-    $(function() {
-        $(window).scroll(function() {
-            if ($(this).scrollTop() >= 215) {
-                $('#navigation').addClass('fixed top');
-            } else {
-                $('#navigation').removeClass('fixed top');
-            }
-        });
-    });
-    function lazyload() {
-        var wt = $(window).scrollTop(); //* top of the window
-        var wb = wt + $(window).height(); //* bottom of the window
-
-        $(".ui.embed").each(function() {
-            var ot = $(this).offset().top; //* top of object (i.e. embed div)
-            var ob = ot + $(this).height(); //* bottom of object
-
-            if (!$(this).attr("loaded") && wt <= ob && wb >= ot) {
-                $(this).embed();
-                $(this).attr("loaded", true);
-            }
-        });
-    }
-    $(window).scroll(lazyload);
-    $(document).ready(function() {
-        window.setInterval(function() {
-            lazyload();
-        }, 500);
-
-    });
-</script>
-<script type="text/javascript">
-    $('#sticky-sidebar').stickThis({
-        zindex: 1,
-        top: 68,
-        pushup: '.page-footer',
-    });
-</script>
-
 </html>
