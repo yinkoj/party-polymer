@@ -6,6 +6,7 @@
 
     <title>PartyCravings Inc.</title>
     <meta content="PartyCravings create your party" name="description">
+    <meta name="viewport" content="initial-scale=1">
     <link href="semantic/dist/semantic.min.css" rel="stylesheet" type="text/css">
     <link href="jquery-sticklr-1.4-dark-color.css" rel="stylesheet" type="text/css">
     <script src="node_modules/jquery/dist/jquery.js" type="text/javascript">
@@ -95,7 +96,7 @@
             </div>
 
 
-            <div class="row">
+            <div class="tablet computer only row">
                 <!--All the stacked top categories with unknown number-->
 
 
@@ -108,6 +109,7 @@
 
             <nav class="ui sticky row borderless menu" id="navigation" style="font-family: 'Quicksand', sans-serif;">
                 <div class="ui grid" style="background-color: #edf3ff;">
+                <div class="computer tablet only row">
                     <div class="three wide column" style="text-align: right;">
                         <div class="ui center aligned">
                             <div class="ui dropdown">
@@ -133,7 +135,7 @@
 
                     <div class="ui eight wide column">
                         <div class="ui container action input">
-                            <input placeholder="What are you looking for?" style="font-family: 'Quicksand', sans-serif;" type="text"> <select class="ui selection dropdown">
+                            <input placeholder="What are you looking for?" style="font-family: 'Quicksand', sans-serif;" type="text"><select class="ui selection dropdown">
                                 <option value="">
                                     All Categories
                                 </option>
@@ -154,7 +156,7 @@
                     </div>
 
 
-                    <div class="ui three wide column">
+                    <div class="ui computer only three wide column">
                         <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;"><i class="right arrow icon"></i>PARTY NOW</button>
                     </div>
 
@@ -162,6 +164,29 @@
                     <div class="ui two wide column">
                         <img class="ui avatar image" src="demo-4.jpg"> <span>Login</span>
                     </div>
+                </div>
+                <div class="two column mobile only row">
+                    <div class="ui container action input">
+                            <input placeholder="What are you looking for?" style="font-family: 'Quicksand', sans-serif;" type="text"><select class="ui selection dropdown">
+                                <option value="">
+                                    All Categories
+                                </option>
+
+                                <option value="articles">
+                                    Foods
+                                </option>
+
+                                <option value="products">
+                                    M.Cs
+                                </option>
+                            </select>
+
+                            <div class="ui primary button">
+                                <i class="search icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </nav>
         </div>
@@ -779,7 +804,7 @@
             </div>
 			
             <div class="ui bottom attached tab active" data-tab="first">
-                <div class="ui four cards fluid">
+                <div class="ui doubling four cards fluid">
                     <div class="card">
                         <div class="image">
                             <div class="ui embed" data-placeholder="demo-4.jpg" data-url="https://www.youtube.com/embed/O6Xo21L0ybE">
@@ -918,7 +943,7 @@
 
 
             <div class="ui bottom attached tab" data-tab="second">
-                <div class="ui four cards fluid">
+                <div class="ui doubling four cards fluid">
                     <div class="card">
                         <div class="image">
                             <div class="ui embed" data-placeholder="demo-4.jpg" data-url="https://www.youtube.com/embed/O6Xo21L0ybE">
@@ -1058,7 +1083,7 @@
 
 
             <div class="ui bottom attached tab" data-tab="third">
-                <div class="ui four cards fluid">
+                <div class="ui doubling four cards fluid">
                     <div class="card">
                         <div class="image">
                             <div class="ui embed" data-placeholder="demo-4.jpg" data-url="https://www.youtube.com/embed/O6Xo21L0ybE">
@@ -1206,7 +1231,7 @@
             <br>
 
 
-            <div class="ui three cards fluid">
+            <div class="ui doubling three cards fluid">
                 <div class="card">
                     <div class="image">
                         <img class="lazy" data-original="demo-2.jpg" height="267" width="400"> <noscript><img height="267" src="demo-2.jpg" width="400"></noscript>
@@ -1251,7 +1276,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="card">
                     <div class="image">
                         <img class="lazy" data-original="demo-2.jpg" height="267" width="400"> <noscript><img height="267" src="demo-2.jpg" width="400"></noscript>
@@ -1402,7 +1427,7 @@
         </div>
 
 
-        <div class="ui grid" id="footer" style="text-align: center; background-color: #A0A1A4;">
+        <div class="ui stackable grid" id="footer" style="text-align: center; background-color: #A0A1A4;">
             <div class="four wide column">
                 <span style="font-size:1.3em;"><b>OTHER COUNTRIES</b></span>
 
@@ -1534,7 +1559,7 @@
 
                     /*#region responsive code begin*/
 
-                    var MAX_WIDTH = 1920;
+                    var MAX_WIDTH = $(window).width();
 
                     function ScaleSlider() {
                         var containerElement = slider.$Elmt.parentNode;
@@ -1583,7 +1608,7 @@
 
                     /*#region responsive code begin*/
 
-                    var MAX_WIDTH = 1920;
+                    var MAX_WIDTH = $(window).width();
 
                     function ScaleSlider() {
                         var containerElement = slider.$Elmt.parentNode;
