@@ -1050,7 +1050,7 @@
                 <div class="row"></div>
             </div>
         </div>
-        <script>
+        <script type="text/javascript">
                                         $(document).ready(function($) {
 
                                             var sliderOptions = {
@@ -1073,8 +1073,9 @@
                                             var slider = new $JssorSlider$("slider-bottom", sliderOptions);
 
                                             /*#region responsive code begin*/
-
-                                            var MAX_WIDTH = $(window).width();
+                                            var win_width = $(window).width();
+                                            var win_height = $(window).height();
+                                            var MAX_WIDTH = (win_height < win_width) ? win_width : win_height;
 
                                             function ScaleSlider() {
                                                 var containerElement = slider.$Elmt.parentNode;
@@ -1123,7 +1124,9 @@
 
                                             /*#region responsive code begin*/
 
-                                            var MAX_WIDTH = $(window).width();
+                                            var win_width = $(window).width();
+                                            var win_height = $(window).height();
+                                            var MAX_WIDTH = (win_height < win_width) ? win_width : win_height;
 
                                             function ScaleSlider() {
                                                 var containerElement = slider.$Elmt.parentNode;
