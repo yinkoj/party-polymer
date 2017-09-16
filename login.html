@@ -1,104 +1,72 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <title>PartyCravings Inc. | Login</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" name="viewport">
     <meta content="PartyCravings create your party" name="description">
     <link href="semantic/dist/semantic.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet">
     <script src="node_modules/jquery/dist/jquery.js" type="text/javascript">
     </script>
     <script src="semantic/dist/semantic.min.js" type="text/javascript">
     </script>
+    <style type="text/css">
+    @media screen and (max-width: 806px) {
+      #sitename{
+        text-align: center !important;
+        padding-left: 0px !important;
+      }
+    }
+  </style>
 </head>
-
 <body style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff;">
-    <div class="ui content">
-        <div class="row" style="padding-left:100px; padding-top:50px; font-size:2em;">
-            <span><b>PartyCravings Inc.</b></span>
-        </div>
-
-
-        <div class="row" style="text-align: center; padding-top: 90px; font-size: 4em;">
-            <span>Log In</span>
-        </div>
         <br>
-        <br>
-
-
+        <h1 id="sitename" style="padding-left:100px;font-size:2.4em;font-family: 'Quicksand', sans-serif;">PartyCravings Inc.</h1><br>
+        <div class="row" style="text-align: center; padding-top: 50px;font-size: 4em;"><span>Log In</span></div><br><br>
         <div class="row" style="text-align: center; font-size:1.3em;">
-            <span>New to PartyCravings? <a href="signup1.html">Sign Up</a></span>
-        </div>
+            <span>New to PartyCravings? <a href="signup1.html" style="color: orange;">Sign Up</a></span>
+        </div><br>
         <br>
-        <br>
-
-
-        <div class="row">
-            <div class="ui container grid">
-                <div class="ui two wide column">
-                </div>
-
-
-                <div class="ui five wide column">
-                    <form class="ui form" method="post">
-                        <div class="field">
-                            <label style="text-align: left; font-size: 1.3em;">Email</label> <input name="email" placeholder="" type="text">
-                        </div>
-
-
-                        <div class="field">
-                            <label style="text-align: left; font-size: 1.3em;">Password</label> <input name="password" placeholder="" type="password">
-                        </div>
-
-
-                        <div class="field">
-                            <div class="ui toggle checkbox">
-                                <input class="hidden" name="remember-me" tabindex="0" type="checkbox"> <label>Remember Me</label>
-                            </div>
-                        </div>
-                        <a href="#">Forgot password?</a>&nbsp;&nbsp; <button class="ui circular primary button" style="font-size:1.5em; text-align:left; font-family: 'Quicksand', sans-serif;" type="submit">Log In</button>
-                    </form>
-                </div>
-
-
-                <div class="ui two wide column">
-                    <div class="ui vertical divider">
-                        OR
+        <div class="ui grid">
+            <div class="ui two wide computer only column"></div>
+            <div class="ui five wide computer sixteen wide tablet mobile column">
+                <form class="ui container form" method="post">
+                    <div class="field">
+                        <label style="font-size: 1.3em;">Email</label> <input name="email" placeholder="" type="text">
                     </div>
-                </div>
-
-
-                <div class="ui left aligned five wide column" style="font-size:5em;">
-                    <br>
-
-
-                    <div class="ui labeled button" style="font-family: 'Quicksand', sans-serif;" tabindex="0">
-                        <div class="big ui blue button">
-                            <i class="facebook icon" style="font-size: 1.3em;"></i>
-                        </div>
-                        <a class="ui basic blue label">Continue with Facebook</a>
+                    <div class="field">
+                        <label style="font-size: 1.3em;">Password</label> <input name="password" placeholder="" type="password">
                     </div>
-                    <br>
-                    <br>
-
-
-                    <div class="ui labeled button" style="font-family: 'Quicksand', sans-serif;" tabindex="0">
-                        <div class="big ui red button">
-                            <i class="google icon" style="font-size: 1.3em;"></i>
+                    <div class="field">
+                        <div class="ui toggle checkbox">
+                            <label>Remember Me</label> <input class="hidden" name="remember-me" tabindex="0" type="checkbox">
                         </div>
-                        <a class="ui basic red label">Continue with Google +&nbsp;</a>
-                    </div>
-                </div>
-
-
-                <div class="ui two wide column">
+                    </div>&nbsp; <a href="#" style="color: orange;">Forgot password?</a>&nbsp;&nbsp; <button class="ui circular primary button" style="font-size:1.5em; font-family: 'Quicksand', sans-serif;" type="submit">Log In</button>
+                </form>
+            </div>
+            <div class="ui two wide computer only column">
+                <div class="ui vertical divider">
+                    OR
                 </div>
             </div>
+            <div class="ui five wide computer center aligned sixteen wide tablet mobile column">
+                <br>
+                <div class="ui center aligned labeled button" style="font-family: 'Quicksand', sans-serif;" tabindex="0">
+                    <div class="big ui blue button">
+                        <i class="facebook icon" style="font-size: 1.3em;"></i>
+                    </div><a class="ui basic blue label">Continue with Facebook</a>
+                </div><br>
+                <br>
+                <div class="ui labeled button" style="font-family: 'Quicksand', sans-serif;" tabindex="0">
+                    <div class="big ui red button">
+                        <i class="google icon" style="font-size: 1.3em;"></i>
+                    </div><a class="ui basic red label">Continue with Google +&nbsp;</a>
+                </div>
+            </div>
+            <div class="ui two wide computer only column"></div>
         </div>
-    </div>
     <script>
-       $('.ui.checkbox')
-           .checkbox();
+          $('.ui.checkbox').checkbox();
     </script>
 </body>
 </html>

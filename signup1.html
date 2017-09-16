@@ -3,36 +3,41 @@
 <html>
 <head>
   <title>PartyCravings Inc. | Sign Up</title>
+  <meta charset="utf-8"/>
   <meta content="PartyCravings create your party" name="description">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" name="viewport">
   <script src="node_modules/jquery/dist/jquery.js" type="text/javascript">
   </script>
   <script src="semantic/dist/semantic.min.js" type="text/javascript">
   </script>
   <link href="semantic/dist/semantic.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet">
+  <style type="text/css">
+    @media screen and (max-width: 600px) {
+      #sitename{
+        text-align: center !important;
+      }
+    }
+  </style>
 </head>
 
 <body style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff;">
   <div class="ui center aligned grid">
-    <div class="ui one wide column">
+    <div class="ui computer tablet only one wide column">
     </div>
 
 
-    <div class="ui six wide column">
-      <div class="row">
-        <div class="row" style="text-align:left; padding-top:50px; font-size:2em;">
-          <span><b>PartyCravings Inc.</b></span>
-        </div>
-      </div>
+    <div class="ui six wide computer tablet sixteen wide container mobile column">
+    <h1 id="sitename" style="padding-top: 50px; font-size:2.4em;font-family: 'Quicksand', sans-serif; text-align: left;">PartyCravings Inc.</h1><br>
 
 
-      <div class="row" style="padding-top:170px;">
+      <div class="row" style="padding-top:120px;">
         <span style="text-align: left; font-size: 3em;">Create an account</span><br>
         <br>
         <br>
 
 
-        <form class="ui form" id="#email-form" method="post" name="#email-form">
+        <form class="ui container form" id="#email-form" method="post" name="#email-form">
           <div class="one field">
             <div class="field">
               <label style="text-align: left; font-size: 1.3em;"><span>What is your <b>e-mail address</b></span></label><br>
@@ -55,18 +60,16 @@
         <br>
 
 
-        <div>
           <button class="ui circular facebook button" style="font-family: 'Quicksand', sans-serif;" type="button"><i class="facebook icon"></i>Facebook</button> <button class="ui circular google plus button" style="font-family: 'Quicksand', sans-serif;" type="button"><i class="google plus icon"></i>Google Plus</button>
-        </div>
       </div>
     </div>
 
 
-    <div class="ui one wide column">
+    <div class="ui computer tablet only one wide column">
     </div>
 
 
-    <div class="ui eight wide column" id="page-side" style="background-color: #FF8300; height: 102.5vh;">
+    <div class="ui computer tablet only eight wide column" id="page-side" style="background-color: orange; height: 102.2vh;">
       <div class="row" style="text-align: right; padding-top: 25px; padding-right: 25px;">
         <span style="color: white;">Have an existing account?</span>&nbsp; <button class="ui inverted basic button" style="font-family: 'Quicksand', sans-serif;">Sign In</button>
       </div>
