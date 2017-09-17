@@ -6,16 +6,15 @@
       PartyCravings Inc.
     </title>
     <meta content="PartyCravings create your party" name="description">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=0" name="viewport">
     <script src="node_modules/jquery/dist/jquery.js" type="text/javascript">
     </script>
     <script src="semantic/dist/semantic.min.js" type="text/javascript">
     </script>
     <link href="semantic/dist/semantic.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
-
-    <script src="jquery.lazyload.js">
-    </script>
-    <script src="js/jssor.slider-25.3.1.min.js" type="text/javascript">
+    <link rel="stylesheet" type="text/css" href="jquery-sticklr-1.4-dark-color.css" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400" rel="stylesheet">
+    <script src="js/jssor.slider.min.js" type="text/javascript">
     </script>
     <script src="jquery-sticklr-1.4.js" type="text/javascript">
     </script>
@@ -80,67 +79,434 @@
                                      opacity: .3;
                                      pointer-events: none;
                                  }
+                                 @media screen and (max-width: 806px) {
+      #sticky-service-form{
+        height: auto !important;
+      }
+      #sticky{
+        display: none !important;
+      }
+    }
     </style>
   </head>
-  <body style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff;">
-    <div class="ui content">
+  <body>
+    <div class="ui vertical inverted orange sidebar menu" style="font-family: 'Quicksand', sans-serif;">
+      <div class="item">
+        <a href="/"><b>UI Docs</b></a>
+      </div><a class="item" href="/introduction/getting-started.html"><b>Getting Started</b></a> <a class="item" href="/introduction/new.html"><b>New in 2.2</b></a>
+      <div class="item">
+        <div class="header">
+          Introduction
+        </div>
+        <div class="menu">
+          <a class="item" href="/introduction/integrations.html">Integrations</a> <a class="item" href="/introduction/build-tools.html">Build Tools</a> <a class="item" href="/introduction/advanced-usage.html">Recipes</a> <a class="item" href="/introduction/glossary.html">Glossary</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="header">
+          Usage
+        </div>
+        <div class="menu">
+          <a class="item" href="/usage/theming.html">Theming</a> <a class="item" href="/usage/layout.html">Layouts</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class=" header">
+          Globals
+        </div>
+        <div class="menu">
+          <a class="item" href="/globals/reset.html">Reset</a> <a class="item" href="/globals/site.html">Site</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class=" header">
+          Elements
+        </div>
+        <div class="menu">
+          <a class="item" href="/elements/button.html">Button</a> <a class="item" href="/elements/container.html">Container</a> <a class="item" href="/elements/divider.html">Divider</a> <a class="item" href="/elements/flag.html">Flag</a> <a class="item"
+          href="/elements/header.html">Header</a> <a class="item" href="/elements/icon.html">Icon</a> <a class="item" href="/elements/image.html">Image</a> <a class="item" href="/elements/input.html">Input</a> <a class="item" href="/elements/label.html">Label</a>          <a class="item" href="/elements/list.html">List</a> <a class="item" href="/elements/loader.html">Loader</a> <a class="item" href="/elements/rail.html">Rail</a> <a class="item" href="/elements/reveal.html">Reveal</a> <a class="item" href="/elements/segment.html">Segment</a>          <a class="item" href="/elements/step.html">Step</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class=" header">
+          Collections
+        </div>
+        <div class="menu">
+          <a class="item" href="/collections/breadcrumb.html">Breadcrumb</a> <a class="item" href="/collections/form.html">Form</a> <a class="item" href="/collections/grid.html">Grid</a> <a class="item" href="/collections/menu.html">Menu</a> <a class="item"
+          href="/collections/message.html">Message</a> <a class="item" href="/collections/table.html">Table</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class=" header">
+          Views
+        </div>
+        <div class="menu">
+          <a class="item" href="/views/advertisement.html">Advertisement</a> <a class="item" href="/views/card.html">Card</a> <a class="item" href="/views/comment.html">Comment</a> <a class="item" href="/views/feed.html">Feed</a> <a class="item" href="/views/item.html">Item</a>          <a class="item" href="/views/statistic.html">Statistic</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class=" header">
+          Modules
+        </div>
+        <div class="menu">
+          <a class="item" href="/modules/accordion.html">Accordion</a> <a class="item" href="/modules/checkbox.html">Checkbox</a> <a class="item" href="/modules/dimmer.html">Dimmer</a> <a class="item" href="/modules/dropdown.html">Dropdown</a> <a class="item"
+          href="/modules/embed.html">Embed</a> <a class="item" href="/modules/modal.html">Modal</a> <a class="item" href="/modules/nag.html">Nag</a> <a class="item" href="/modules/popup.html">Popup</a> <a class="item" href="/modules/progress.html">Progress</a>          <a class="item" href="/modules/rating.html">Rating</a> <a class="item" href="/modules/search.html">Search</a> <a class="item" href="/modules/shape.html">Shape</a> <a class="item" href="/modules/sidebar.html">Sidebar</a> <a class="item" href="/modules/sticky.html">Sticky</a>          <a class="item" href="/modules/tab.html">Tab</a> <a class="item" href="/modules/transition.html">Transition</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class=" header">
+          Behaviors
+        </div>
+        <div class="menu">
+          <a class="item" href="/behaviors/api.html">API</a> <a class="item" href="/behaviors/form.html">Form Validation</a> <a class="item" href="/behaviors/visibility.html">Visibility</a>
+        </div>
+      </div>
+    </div>
+    <div class="pusher" id="content" style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff !important;">
+      <!--All the divs-->
       <div class="ui center aligned grid" style="padding-top: 20px">
         <!--All the top nav bar divs-->
         <div class="row" id="top-bar">
-          <span style="font-size: 2em;"><b>PartyCravings Inc.</b></span>
+          <h1 style="font-family: 'Quicksand', sans-serif; font-size:2.4em;">PartyCravings Inc.</h1>
         </div>
-        <div class="row">
+        <div class="computer only row">
           <!--All the stacked top categories with unknown number-->
           <div class="ui secondary menu" style="font-family: 'Quicksand', sans-serif; font-size: 1.2em;">
             <a class="item" href="#">DRINKS</a> <a class="item" href="#">FOOD</a> <a class="item" href="#">M.Cs</a> <a class="item" href="#">COMEDIANS</a> <a class="item" href="#">CLOTHES</a> <a class="item" href="#">OTHERS</a>
           </div>
         </div>
-        <nav class="ui sticky row borderless menu" id="navigation" style="font-family: 'Quicksand', sans-serif;">
-          <div class="ui grid" style="background-color: #edf3ff;">
-            <div class="three wide column" style="text-align: right;">
-              <div class="ui center aligned">
-                <div class="ui dropdown">
-                  <div class="text">
-                    Need help?
-                  </div><i class="dropdown icon"></i>
-                  <div class="menu">
-                    <div class="item">
-                      info@partycravings.com
-                    </div>
-                    <div class="item">
-                      +2340123456
+        <nav class="ui sticky row borderless menu" style="font-family: 'Quicksand', sans-serif;background-color: #edf3ff;">
+          <div class="ui grid">
+            <div class="computer only row">
+              <div class="three wide column" style="text-align: right;">
+                <div class="ui center aligned">
+                  <div class="ui dropdown">
+                    <div class="text">
+                      Need help?
+                    </div><i class="dropdown icon"></i>
+                    <div class="menu">
+                      <div class="item">
+                        info@partycravings.com
+                      </div>
+                      <div class="item">
+                        +2340123456
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="ui eight wide column">
-              <div class="ui container action input">
-                <input placeholder="What are you looking for?" style="font-family: 'Quicksand', sans-serif;" type="text"> <select class="ui selection dropdown">
-                  <option value="">
-                    All Categories
-                  </option>
-                  <option value="articles">
-                    Foods
-                  </option>
-                  <option value="products">
-                    M.Cs
-                  </option>
-                </select>
-                <div class="ui primary button">
-                  <i class="search icon"></i>
-                </div>
+              <div class="ui eight wide column">
+                <form>
+                  <div class="ui container action input">
+                    <input name="query" placeholder="What are you looking for?" style="font-family: 'Quicksand', sans-serif;" type="text" />
+                    <select class="ui selection dropdown" name="category">
+                      <option value="">
+                        All Categories
+                      </option>
+                      <option value="foods">
+                        Foods
+                      </option>
+                      <option value="mcs">
+                        M.Cs
+                      </option>
+                    </select>
+                    <button class="ui primary button" type="submit"><i class="search icon"></i></button>
+                  </div>
+                </form>
+              </div>
+              <div class="ui three wide column">
+                <button class="ui circular primary right labeled icon button" name="party now" style="font-family: 'Quicksand', sans-serif;"><i class="right arrow icon"></i>PARTY NOW</button>
+              </div>
+              <div class="ui two wide column">
+                <img alt="#" class="ui avatar image" src="demo-4.jpg" /><a href="login.html">Login</a>
               </div>
             </div>
-            <div class="ui three wide column">
-              <button class="ui circular primary right labeled icon button" style="font-family: 'Quicksand', sans-serif;"><i class="right arrow icon"></i>PARTY NOW</button>
-            </div>
-            <div class="ui two wide column">
-              <img class="ui avatar image" src="demo-4.jpg"> <span>Login</span>
+            <div class="ui tablet mobile only row">
+              <div class="ui top attached">
+                <button class="ui orange toggle button" name="menu">&nbsp;<i class="sidebar icon"></i></button>
+              </div>&nbsp;
+              <form>
+                <div class="ui action input">
+                  <input name="query" placeholder="What are you looking for?" style="font-family: 'Quicksand', sans-serif;" type="text" />
+                  <button class="ui primary button"><i class="search icon"></i></button>
+                </div>&nbsp;
+              </form>
+              <div class="ui right floated image"><img class="ui avatar image" alt="account" src="demo-4.jpg" style="position: relative; top: 50%; transform: translateY(-50%);" /></div>
             </div>
           </div>
         </nav>
       </div>
+      <!--End-->
+      <!--End-->
+      <div id="sticky">
+        <ul class="sticklr" id="example-1">
+          <li>
+            <a class="icon-login" href="#" title="Site switcher"></a>
+            <ul>
+              <li class="sticklr-title">
+                <a href="#">Show on hover</a>
+              </li>
+              <li>
+                <a class="facebook icon" href="http://themeforest.net/?ref=amatyr4n">ActiveDen</a>
+              </li>
+              <li>
+                <a class="icon-flickr" href="http://codecanyon.net/?ref=amatyr4n">AudioJungle</a>
+              </li>
+              <li>
+                <a class="icon-facebook" href="http://themeforest.net/?ref=amatyr4n">ThemeForest</a>
+              </li>
+              <li>
+                <a class="icon-google" href="http://codecanyon.net/?ref=amatyr4n">VideoHive</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="icon-calendar" href="#" title="Site switcher"></a>
+            <ul>
+              <li class="sticklr-title">
+                <a href="#">Right-side panel</a>
+              </li>
+              <li>
+                <a class="icon-reddit" href="http://codecanyon.net/?ref=amatyr4n">GraphicRiver</a>
+              </li>
+              <li>
+                <a class="icon-lastfm" href="http://themeforest.net/?ref=amatyr4n">3DOcean</a>
+              </li>
+              <li>
+                <a class="icon-technorati" href="http://codecanyon.net/?ref=amatyr4n">CodeCanyon</a>
+              </li>
+              <li>
+                <a class="icon-yahoo" href="http://themeforest.net/?ref=amatyr4n">Tuts+</a>
+              </li>
+              <li>
+                <a class="icon-dribbble" href="http://themeforest.net/?ref=amatyr4n">PhotoDune</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="icon-login" href="#" title="Search"></a>
+            <ul>
+              <li class="sticklr-title">
+                <a href="#">Search</a>
+              </li>
+              <li>
+                <form action="#" method="post">
+                  <input name="search" placeholder="Type then press Enter.." type="text" value="" />
+                </form>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="icon-twitter" href="#" title="Search"></a>
+            <ul>
+              <li>
+                <a class="icon-tag" href="#">There's nothing here</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sticklr" id="example-2">
+          <li>
+            <a class="icon-tag" href="#" title="Site switcher"></a>
+            <ul>
+              <li class="sticklr-title">
+                <a href="#">Site Switcher</a>
+              </li>
+              <li>
+                <a class="icon-amazon" href="http://themeforest.net/?ref=amatyr4n">ActiveDen</a>
+              </li>
+              <li>
+                <a class="icon-flickr" href="http://codecanyon.net/?ref=amatyr4n">AudioJungle</a>
+              </li>
+              <li>
+                <a class="icon-facebook" href="http://themeforest.net/?ref=amatyr4n">ThemeForest</a>
+              </li>
+              <li>
+                <a class="icon-google" href="http://codecanyon.net/?ref=amatyr4n">VideoHive</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a class="icon-reddit" href="http://codecanyon.net/?ref=amatyr4n">GraphicRiver</a>
+              </li>
+              <li>
+                <a class="icon-lastfm" href="http://themeforest.net/?ref=amatyr4n">3DOcean</a>
+              </li>
+              <li>
+                <a class="icon-technorati" href="http://codecanyon.net/?ref=amatyr4n">CodeCanyon</a>
+              </li>
+              <li>
+                <a class="icon-yahoo" href="http://themeforest.net/?ref=amatyr4n">Tuts+</a>
+              </li>
+              <li>
+                <a class="icon-dribbble" href="http://themeforest.net/?ref=amatyr4n">PhotoDune</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="icon-zoom" href="#" title="Search"></a>
+            <ul>
+              <li>
+                <form action="#" method="post">
+                  <input name="search" placeholder="Type then press Enter.." type="text" value="" />
+                </form>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="icon-sitemap" href="#" title="Multiple-column ready"></a>
+            <ul>
+              <li class="sticklr-title">
+                <a href="#">Multiple-column ready</a>
+              </li>
+              <li>
+                <a class="icon-amazon" href="http://themeforest.net/?ref=amatyr4n">ActiveDen</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a class="icon-flickr" href="http://codecanyon.net/?ref=amatyr4n">AudioJungle</a>
+              </li>
+              <li>
+                <a class="icon-facebook" href="http://themeforest.net/?ref=amatyr4n">ThemeForest</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a class="icon-google" href="http://codecanyon.net/?ref=amatyr4n">VideoHive</a>
+              </li>
+              <li>
+                <a class="icon-reddit" href="http://codecanyon.net/?ref=amatyr4n">GraphicRiver</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a class="icon-lastfm" href="http://themeforest.net/?ref=amatyr4n">3DOcean</a>
+              </li>
+              <li>
+                <a class="icon-technorati" href="http://codecanyon.net/?ref=amatyr4n">CodeCanyon</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a class="icon-yahoo" href="http://themeforest.net/?ref=amatyr4n">Tuts+</a>
+              </li>
+              <li>
+                <a class="icon-dribbble" href="http://themeforest.net/?ref=amatyr4n">PhotoDune</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="icon-twitter" href="#" title="Sign-in"></a>
+            <ul>
+              <li class="sticklr-title">
+                <a href="#">Form example</a>
+              </li>
+              <li>
+                <form method="post">
+                  <input name="username" placeholder="username" type="text" value="" />
+                  <input name="password" placeholder="password" type="password" value="" />
+                  <input name="submit" type="submit" value="Submit" />
+                </form>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="icon-twitter" href="#" title="Sharing"></a>
+            <ul>
+              <li class="sticklr-title">
+                <a href="#">Sharing</a>
+              </li>
+              <li>
+                <a class="icon-twitter" href="http://twitter.com/">Tweet this on Twitter</a>
+              </li>
+              <li>
+                <a class="icon-delicious" href="http://facebook.com/">Share this on Facebook</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="icon-twitter" href="#" title="Calendar"></a>
+            <ul>
+              <li class="sticklr-title">
+                <a href="#">Example use</a>
+              </li>
+              <li>
+                <table class="calendar">
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                  </tr>
+                  <tr>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                  </tr>
+                  <tr>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="icon-twitter" href="#" title="Notification"><span class="notification-count">3</span></a>
+            <ul>
+              <li class="sticklr-title">
+                <a href="#">Notification (3)</a>
+              </li>
+              <li>
+                <form action="#" method="post">
+                  <input name="search" placeholder="Someone is typing.." type="text" value="" />
+                </form>
+              </li>
+              <li>
+                <a class="icon-user" href="#">00:32 Hello!</a>
+              </li>
+              <li>
+                <a class="icon-user" href="#">23:52 Not really works</a>
+              </li>
+              <li>
+                <a class="icon-user" href="#">22:07 Just example use</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div style=" padding-top: 2.05vh;"></div>
       <div class="row">
         <div id="slider-top" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
           <!-- Loading Screen -->
@@ -206,26 +572,20 @@
             <path class="a" d="M11962.3,8357.3l-5891.8,5891.8c-100.6,100.6-219.7,150.9-357.3,150.9s-256.7-50.3-357.3-150.9 L4037.7,12931c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3L8254.1,8000L4037.7,3783.6 c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3l1318.1-1318.1c100.6-100.6,219.7-150.9,357.3-150.9 s256.7,50.3,357.3,150.9l5891.8,5891.8c100.6,100.6,150.9,219.7,150.9,357.3C12113.2,8137.6,12062.9,8256.7,11962.3,8357.3 L11962.3,8357.3z"></path></svg>
           </div>
         </div>
-      </div><br>
+      </div>
       <div class="row">
-        <div class="ui divided grid">
-          <div class="ui right aligned six wide column">
-            <p style="padding-right: 125px;">
+        <div class="ui internally celled three column grid">
+          <div class="ui center aligned column">
               <a style="color: black;"><i class="big orange photo icon"></i> 2</a>
-            </p>
           </div>
-          <div class="ui center aligned four wide column">
-            <p>
+          <div class="ui center aligned column">
               <a style="color: black;"><i class="big orange music icon"></i> 21</a>
-            </p>
           </div>
-          <div class="ui left aligned six wide column">
-            <p style="padding-left: 125px;">
+          <div class="ui center aligned column">
               <a style="color: black;"><i class="big orange film icon"></i> 0</a>
-            </p>
           </div>
         </div>
-      </div><br>
+      </div>
       <div class="row">
         <div class="ui center aligned segment" style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff;">
           <div class="ui breadcrumb">
@@ -242,36 +602,32 @@
           <div class="row" style="text-align:center; font-size: 1.2em; padding-top: 30px;">
             <span><b>Cook from Ogijo, Ogun state</b></span>
         </div>
-        <div class="ui divided grid" style="padding-top: 30px;">
-          <div class="ui right aligned eight wide column">
-            <i class="orange star icon"></i>
-            <i class="orange star icon"></i>
-            <i class="orange star icon"></i>
-            <i class="orange star icon"></i>
-            <i class="orange star icon"></i>
+        <div class="ui divided two column grid" style="padding-top: 30px;">
+          <div class="ui right aligned column">
+            <div class="ui star rating" data-rating="4"></div>
             &nbsp;<span><b>8 REVIEWS</b></span>
           </div>
-          <div class="ui left aligned eight wide column">
+          <div class="ui left aligned column">
             <span><b>14 VERIFIED BOOKINGS</b></span>
           </div>
         </div><br>
         <div class="ui segment" style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff;">
           <div class="ui grid">
-            <div class="ui right aligned five wide column">
+            <div class="ui center aligned five wide column">
               <span><b>MEMBER SINCE 2009</b></span>
             </div>
             <div class="ui center aligned six wide column">
               <span><b>$1800 - $4500 PER EVENT</b></span>
             </div>
-            <div class="ui left aligned five wide column">
-              <span><b>ACCEPTS ONLINE PAYMENTS</b></span>
+            <div class="ui center aligned five wide column">
+              <span><b>ONLINE PAYMENTS</b></span>
             </div>
           </div>
         </div>
       </div><br>
-      <div class="ui grid">
+      <div class="ui stackable grid">
         <div class="ui one wide column"></div>
-        <div class="ui ten wide column">
+        <div class="ui ten wide computer fourteen wide mobile tablet column">
           <div class="row">
             <span><i class="orange marker icon"></i>ogijo, ogun state (View map)</span><br>
             <span><i class="orange users icon"></i>6 people max</span><br>
@@ -287,15 +643,11 @@
             <div class="ui top attached inverted tabular menu" style="font-family: 'Quicksand', sans-serif; background-color: #edf3ff;">
               <a class="orange item" data-tab="first"><p style="color: black;">Back to results</p></a>
               <a class="orange item" data-tab="second"><p style="color: black;">Location</p></a>
-              <a class="orange item" data-tab="third"><p style="color: black;">Reviews</p></a>
-              <a class="orange item" data-tab="fourth"><p style="color: black;">Other blabs</p></a>
-              <a class="orange item" data-tab="fifth"><p style="color: black;">still other blabs</p></a>
+              <a class="orange item" data-tab="third"><p style="color: black;">Other blabs</p></a>
             </div>
             <div class="ui bottom attached tab" data-tab="first"></div>
             <div class="ui bottom attached tab" data-tab="second"></div>
             <div class="ui bottom attached tab" data-tab="third"></div>
-            <div class="ui bottom attached tab" data-tab="fourth"></div>
-            <div class="ui bottom attached tab" data-tab="fifth"></div>
           </div>
           <div class="ui accordion" style="padding-top: 15px;">
             <div class="ui active orange dividing header title" style="font-family: 'Quicksand', sans-serif; font-size: 1.2em;">
@@ -317,7 +669,7 @@
             <div class="ui active orange dividing header title" style="font-family: 'Quicksand', sans-serif; font-size: 1.2em;">
                 <p style="color: black;">Customer Reviews</p>
             </div>
-            <div class="active content">
+            <div class="content">
               <p class="transition">
                 A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
               </p>
@@ -325,7 +677,7 @@
             <div class="ui active orange dividing header title" style="font-family: 'Quicksand', sans-serif; font-size: 1.2em;">
                 <p style="color: black;">Services & features</p>
             </div>
-            <div class="active content">
+            <div class="content">
               <p class="transition">
                 A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
               </p>
@@ -333,7 +685,7 @@
             <div class="ui active orange dividing header title" style="font-family: 'Quicksand', sans-serif; font-size: 1.2em;">
                 <p style="color: black;">Rates</p>
             </div>
-            <div class="active content">
+            <div class="content">
               <p class="transition">
                 A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
               </p>
@@ -341,14 +693,14 @@
             <div class="ui active orange dividing header title" style="font-family: 'Quicksand', sans-serif; font-size: 1.2em;">
                 <p style="color: black;">Similar Services</p>
             </div>
-            <div class="active content">
+            <div class="content">
               <p class="transition">
                 A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
               </p>
             </div>
           </div>
         </div>
-        <div class="ui four wide column">
+        <div class="ui four wide computer sixteen wide mobile tablet column">
           <div class="ui segment" id="sticky-service-form" style="height: 85.5vh;">
             <form class="ui form">
               <div class="field">
@@ -372,7 +724,7 @@
                   <input name="checkbox" type="checkbox"> <label>Checkbox</label>
                 </div>
               </div>
-              <div class="ui submit button">
+              <div class="ui orange submit button">
                 Submit
               </div>
               <div class="ui error message"></div>
@@ -380,72 +732,64 @@
           </div>
         </div>
         <div class="ui one wide column"></div>
-        <div id="context" style="padding-top: 100px;"></div>
+        <div id="context"></div>
       </div>
+    </div>
       <script type="text/javascript">
-                             $('.ui.dropdown')
-                                     .dropdown({
-                                         on: 'click'
-                                     });
-                             $('.ui.accordion')
-           .accordion()
-           ;
+          $('.ui.dropdown')
+           .dropdown({
+              on: 'click'
+                    });
+          $('.ui.accordion').accordion();
+          $('.ui.rating').rating('disable');
       </script> 
       <script type="text/javascript">
-                          $(document).ready(function($) {
-
-                                          var slideshowTransitions = [{
-                                              $Duration: 5000,
-                                              $Opacity: 2
-                                          }];
 
                                           var options = {
-                                              $AutoPlay: 1,
-                                              $SlideshowOptions: {
-                                                  $Class: $JssorSlideshowRunner$,
-                                                  $Transitions: slideshowTransitions,
-                                                  $TransitionsOrder: 1
-                                              },
-                                              $ArrowNavigatorOptions: {
-                                                  $Class: $JssorArrowNavigator$
-                                              },
-                                              $BulletNavigatorOptions: {
-                                                  $Class: $JssorBulletNavigator$
-                                              }
-                                          };
+              $AutoPlay: 1,
+              $SlideWidth: 720,
+              $Cols: 2,
+              $Align: 130,
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
 
-                                          var slider = new $JssorSlider$("slider-top", options);
+            var slider = new $JssorSlider$("slider-top", options);
 
-                                          /*#region responsive code begin*/
+            /*#region responsive code begin*/
 
-                                          var MAX_WIDTH = 1920;
+            var MAX_WIDTH = 1920;
 
-                                          function ScaleSlider() {
-                                              var containerElement = slider.$Elmt.parentNode;
-                                              var containerWidth = containerElement.clientWidth;
+            function ScaleSlider2() {
+                var containerElement = slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
 
-                                              if (containerWidth) {
+                if (containerWidth) {
 
-                                                  var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
 
-                                                  slider.$ScaleWidth(expectedWidth);
-                                              } else {
-                                                  window.setTimeout(ScaleSlider, 30);
-                                              }
-                                          }
+                    slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider2, 30);
+                }
+            }
 
-                                          ScaleSlider();
+            ScaleSlider2();
 
-                                          $(window).bind("load", ScaleSlider);
-                                          $(window).bind("resize", ScaleSlider);
-                                          $(window).bind("orientationchange", ScaleSlider);
+            $(window).bind("load", ScaleSlider2);
+            $(window).bind("resize", ScaleSlider2);
+            $(window).bind("orientationchange", ScaleSlider2);
                                           /*#endregion responsive code end*/
-                                      });
-                          $('#navigation')
-                                    .sticky({
-                                      offset:0,
-                                      context: '#context'
-                                    });
+                          $('nav').sticky({
+        offset: 0,
+        context: '#context',
+        silent: true
+      });
                                     
                        $('.menu .item').tab();
                        $('#sticky-service-form').stickThis({
@@ -453,6 +797,17 @@
                            top: 80,
                            pushup: '.page-footer',
                        });
+                       if (/Android|BlackBerry|iPhone|iPad|iPod|webOS/i.test(navigator.userAgent) === false) {
+        $('#example-1').sticklr({
+          showOn: 'hover',
+          stickTo: 'right',
+        });
+      } //run sticklr, not a mobile device
+      else {
+        $('.toggle.button').click(function() {
+          $('.ui.sidebar').sidebar('toggle');
+        });
+      }
       </script>
     </div>
   </body>
