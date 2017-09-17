@@ -21,21 +21,6 @@
     <script async defer src="jquery.sticky.lockfixed.min.js">
     </script>
     <style>
-                                 
-                                 .jssorl-009-spin img {
-                                     animation-name: jssorl-009-spin;
-                                     animation-duration: 1.6s;
-                                     animation-iteration-count: infinite;
-                                     animation-timing-function: linear;
-                                 }
-                                 @keyframes jssorl-009-spin {
-                                     from {
-                                         transform: rotate(0deg);
-                                     }
-                                     to {
-                                         transform: rotate(360deg);
-                                     }
-                                 }
                                  .jssorb057 .i {
                                      position: absolute;
                                      cursor: pointer;
@@ -510,52 +495,19 @@
       <div class="row">
         <div id="slider-top" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:380px;overflow:hidden;visibility:hidden;">
           <!-- Loading Screen -->
-          <div class="jssorl-009-spin" data-u="loading" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img src="img/spin.svg" style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;">
-          </div>
           <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
-            <div>
-              <img data-u="image" src="img/001.jpg">
-            </div>
-            <div>
-              <img data-u="image" src="img/005.jpg">
-            </div>
-            <div>
-              <img data-u="image" src="img/006.jpg">
-            </div>
-            <div>
-              <img data-u="image" src="img/007.jpg">
-            </div>
-            <div>
-              <img data-u="image" src="img/008.jpg">
-            </div>
-            <div>
-              <img data-u="image" src="img/009.jpg">
-            </div>
-            <div>
-              <img data-u="image" src="img/010.jpg">
-            </div>
-            <div>
-              <img data-u="image" src="img/011.jpg">
-            </div>
-            <div>
-              <img data-u="image" src="img/024.jpg">
-            </div>
-            <div>
-              <img data-u="image" src="img/025.jpg">
-            </div>
-            <div>
-              <img data-u="image" src="img/026.jpg">
-            </div>
-            <div>
-              <img data-u="image" src="img/027.jpg">
-            </div>
-            <div style="background-color:#ff7c28;">
-              <div style="position:absolute;top:50px;left:50px;width:450px;height:62px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:left;padding:5px;box-sizing:border-box;">
-                Photos in this slider are to demostrate jssor slider,<br>
-                which are not licensed for any other purpose.
-              </div>
-            </div>
+            <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/001.jpg" /></div>
+          <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/005.jpg" /></div>
+          <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/006.jpg" /></div>
+          <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/007.jpg" /></div>
+          <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/008.jpg" /></div>
+          <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/009.jpg" /></div>
+          <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/010.jpg" /></div>
+          <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/011.jpg" /></div>
+          <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/024.jpg" /></div>
+          <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/025.jpg" /></div>
+          <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/026.jpg" /></div>
+          <div class="image"><img data-u="image" alt="#" src="demo-2.jpg" data-src="img/027.jpg" /></div>
           </div><!-- Bullet Navigator -->
           <div class="jssorb057" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75" data-u="navigator" style="position:absolute;bottom:12px;right:12px;">
             <div class="i" data-u="prototype" style="width:16px;height:16px;">
@@ -789,6 +741,11 @@
         offset: 0,
         context: '#context',
         silent: true
+      });
+                          $('.image img').visibility({
+        type: 'image',
+        transition: 'fade in',
+        duration: 1000
       });
                                     
                        $('.menu .item').tab();
